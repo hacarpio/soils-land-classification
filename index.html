@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soils and Land Classification Workspace</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f5f2;
+            color: #173024;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+                linear-gradient(
+                    rgba(20, 55, 38, 0.78),
+                    rgba(20, 55, 38, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            text-align: center;
+
+            padding: 70px 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin-top: 12px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            max-width: 1150px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #66736b;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.08);
+
+            border-top: 6px solid #b52e70;
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            margin: 5px 0 10px;
+            font-size: 23px;
+        }
+
+        .card p {
+            color: #66736b;
+            line-height: 1.6;
+            min-height: 70px;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+            display: inline-block;
+
+            background: #b52e70;
+            color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #8f2057;
+        }
+
+        /* =========================
+           PROJECT SECTION
+        ========================= */
+
+        .projects {
+            margin-top: 35px;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .projects h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .projects p {
+            color: #66736b;
+        }
+
+        .project-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+        .project-buttons a {
+            background: #eef1ed;
+
+            color: #173024;
+
+            padding: 13px 20px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border: 1px solid #dce3de;
+
+            transition: 0.2s;
+        }
+
+        .project-buttons a:hover {
+            background: #dce5de;
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            color: #718078;
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 50px 20px;
+            }
+
+            .header h1 {
+                font-size: 29px;
+            }
+
+            .header p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <h1>
+            SOILS & LAND CLASSIFICATION
+        </h1>
+
+        <p>
+            Interactive GIS Project Workspace
+        </p>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================= -->
+
+        <section class="intro">
+
+            <h2>
+                PROJECT INFORMATION PORTAL
+            </h2>
+
+            <p>
+                Explore project maps, technical reports,
+                land resources information and irrigation planning data.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             MAIN CATEGORIES
+        ========================= -->
+
+        <section class="cards">
+
+
+            <!-- PRE-FEASIBILITY -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🗺️
+                </div>
+
+                <h2>
+                    Pre-Feasibility Studies
+                </h2>
+
+                <p>
+                    Access Pre-FS project maps,
+                    land use, soil information,
+                    potential irrigable areas and technical reports.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    OPEN PRE-FS
+                </a>
+
+            </div>
+
+
+
+            <!-- FEASIBILITY -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📊
+                </div>
+
+                <h2>
+                    Feasibility Studies
+                </h2>
+
+                <p>
+                    Access feasibility study projects,
+                    GIS maps, land resources information
+                    and technical documentation.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    OPEN FEASIBILITY
+                </a>
+
+            </div>
+
+
+
+            <!-- EVALUATION -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📑
+                </div>
+
+                <h2>
+                    Evaluation Reports
+                </h2>
+
+                <p>
+                    Review technical evaluation reports,
+                    comments, revisions and final outputs.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    OPEN REPORTS
+                </a>
+
+            </div>
+
+
+
+            <!-- NIMP -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🌾
+                </div>
+
+                <h2>
+                    National Irrigation Master Plan
+                </h2>
+
+                <p>
+                    Access irrigation planning information,
+                    maps, inventory and management data.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    OPEN NIMP
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PRE-FS PROJECTS
+        ========================= -->
+
+        <section class="projects">
+
+            <h2>
+                🌱 Pre-Feasibility Study Projects
+            </h2>
+
+            <p>
+                Select a project to open the project workspace.
+            </p>
+
+
+            <div class="project-buttons">
+
+
+                <a
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ESTER
+                </a>
+
+
+                <a
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    DUPITAC
+                </a>
+
+
+                <a
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ESTANCIA
+                </a>
+
+
+                <a
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    CARASI
+                </a>
+
+
+                <a
+                    href="https://sites.google.com/view/soils-land-classification-unit/workspace"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    SOLSONA
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="footer">
+
+        Soils & Land Classification Workspace
+        <br>
+        GIS-Based Project Information Portal
+
+    </footer>
+
+
+</body>
+</html>
